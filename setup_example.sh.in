@@ -1,0 +1,5 @@
+source @kwiver_DIR@/setup_KWIVER.sh
+export KWIVER_DEFAULT_LOG_LEVEL=ERROR
+export SPROKIT_PYTHON_MODULES=example:${SPROKIT_PYTHON_MODULES}
+export PYTHONPATH=@kwiver_python_output_path@/@python_sitename@:${PYTHONPATH}
+
