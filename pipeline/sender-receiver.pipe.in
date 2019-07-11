@@ -1,0 +1,18 @@
+# ===================================
+process sender
+        :: SenderProcess
+# ===================================
+process receiver
+        :: ReceiverProcess
+# ===================================
+
+# Connections
+connect from sender.BBoxWithMultipleDescriptors
+  to receiver.BBoxWithMultipleDescriptors
+# ==================================
+
+# Pipeline Configuration
+config _pipeline:_edge
+       capacity = 1
+config _scheduler
+       type = pythread_per_process
